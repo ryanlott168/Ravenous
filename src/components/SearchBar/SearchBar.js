@@ -6,8 +6,8 @@ class SearchBar extends React.Component {
     super(props);
 
     this.state = {
-      term: "",
-      location: "",
+      term: '',
+      location: '',
       sortBy: 'best_match'
     };
 
@@ -52,8 +52,7 @@ class SearchBar extends React.Component {
     return Object.keys(this.sortByOptions).map(sortByOption => {
       let sortByOptionValue = this.sortByOptions[sortByOption];
       return (<li className={this.getSortByClass(sortByOptionValue)}
-                  key={sortByOptionValue}
-                  onClick={this.handleSortByChange}>
+                  key={sortByOptionValue} onClick={this.handleSortByChange}>
                   {sortByOption}
                   </li>);
     });
